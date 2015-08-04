@@ -4,5 +4,7 @@ class NoticeNotificationServiceWorker
   def perform(notice_id)
     notice = Notice.find(notice_id)
     notice.app.notification_service.create_notification(notice.problem)
+  rescue ActiveRecord::RecordNotFound
+    # ignore
   end
 end
