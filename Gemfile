@@ -107,8 +107,7 @@ group :development do
   gem 'foreman', :require => false
 
   # Use puma for development
-  gem 'puma', :require => false
-
+  # gem 'puma', :require => false
 end
 
 group :test do
