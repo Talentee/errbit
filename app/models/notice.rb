@@ -175,7 +175,6 @@ class Notice < ActiveRecord::Base
     end
   end
 
-
   def sanitize_hash(h)
     h.recurse do
       |h| h.inject({}) do |h,(k,v)|
